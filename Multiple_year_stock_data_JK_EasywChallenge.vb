@@ -29,11 +29,11 @@ Sub StockMarketEasy():
 
 'Define variables
 Dim Ticker As String
-Dim Total_Volume As Long
+Dim Total_Volume As Double
 Dim i As Long
 Dim Volume As Long
 Dim LastRow As Long
-Dim Summary_Table_Row As Long
+Dim Summary_Table_Row As Integer
 Dim WorksheetName As String
 Dim ws As Worksheet
 
@@ -101,9 +101,7 @@ Summary_Table_Row = 2
                 'Add the ticker volume
                 Total_Volume = Total_Volume + ws.Cells(i, 7).Value
                 
-                'Reset the ticker symbol total volume for next ticker symbol
-                Total_Volume = 0
-                 
+                                
                 
             End If
             
